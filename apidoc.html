@@ -1,0 +1,32 @@
+<h1 id="api-documentation">API Documentation</h1>
+<p>This API is RESTful because: - It is hackable up the tree - It uses
+short, meaningfull names - It uses GET, POST and DELETE on objects</p>
+<p>The api lives in the /api/ endpoints</p>
+<h2 id="favourites">Favourites</h2>
+<p>To add or remove favourites, on <code>/api/favourites</code><br />
+<strong>GET:</strong> Returns a list with all favourites (id’s)<br />
+<strong>POST:</strong> Adds a favourite
+<code>arguments: film=&lt;id&gt;</code><br />
+<strong>DELETE:</strong> Removes a favourite
+<code>arguments: film=&lt;id&gt;</code></p>
+<h2 id="films">Films</h2>
+<p>Get a list of popular films, on <code>/api/films</code><br />
+<strong>GET:</strong> Gives the (id, title) of the 20 most popular
+films<br />
+<strong>POST:</strong> Gives the (id, title of the <em>n</em> most
+popular films <code>arguments: aantal=&lt;n&gt;</code><br />
+<strong>DELETE:</strong> Removes a film from the index (untill restart)
+<code>arguments: film=&lt;id&gt;</code></p>
+<h3 id="about-a-film">About a film</h3>
+<p>Get info about a film, on <code>/api/films/&lt;id&gt;</code><br />
+<strong>GET:</strong> Gives information about a film, everything from
+tmdb<br />
+<strong>DELETE:</strong> Removes a film from the index (untill restart)
+<code>arguments: film=&lt;id&gt;</code></p>
+<h3 id="similar-films">Similar films</h3>
+<p>Get a list of similar films, on
+<code>/api/films/&lt;id&gt;/similar</code><br />
+<strong>GET:</strong> Gives (id, title) from similar films<br />
+You can also select on criteria by using the endpoint
+<code>/films/&lt;id&gt;/similar/&lt;criterium&gt;</code> for
+<em>actors</em>, <em>duration</em> or <em>genre</em>.</p>
